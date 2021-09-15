@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShare Web Link Shortener</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+<script>
+  var config = {
+    apiKey: "AIzaSyC2ISTxxl_gqGRoMpFMeeOWGRONuel0OEc",
+  authDomain: "linkshare-2a50e.firebaseapp.com",
+  databaseURL: "https://linkshare-2a50e-default-rtdb.firebaseio.com",
+  projectId: "linkshare-2a50e",
+  storageBucket: "linkshare-2a50e.appspot.com",
+  messagingSenderId: "85336911304",
+  appId: "1:85336911304:web:1e80b41f1dc4e9da7ce4fd"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+  <input type="url" id="url" required class="form-control" placeholder="Destination URL"><button onclick="paste()" class="btn btn-primary">Paste</button><br>
+  <span id="readonly">https://shivampai.github.io/link/?l=</span><input type="text" id="path" placeholder="" required maxlength="15" width="25">
+  <button onclick="save()" class="form-control">Publish</button>
+  <input id="hidden" class="form-control" style="display: none;" readonly onClick="this.select();" value="URL" />
+</body>
+</html>
